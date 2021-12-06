@@ -1,0 +1,18 @@
+.search{
+    background-color: #eee;
+    border-radius: 10px;
+
+}
+.search input {
+    background-color: transparent;
+    border:none;
+    padding: 15px 30px;
+}
+
+.search button{
+    background-color: #3e4de1;
+    color:white;
+    border:none;
+    padding: 5px 20px;
+    border-radius: 15px 0 0 15px;
+}

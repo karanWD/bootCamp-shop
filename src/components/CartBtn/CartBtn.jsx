@@ -6,6 +6,7 @@ const CartBtn = ({width,height}) => {
         <div className={`ps-5`}>
             <img className={`col-12 px-0`} src={CartSvg} alt="" style={{width:width,height:height}}/>
         </div>
+
     )
 }
 

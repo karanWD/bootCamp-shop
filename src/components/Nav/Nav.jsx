@@ -3,8 +3,10 @@ import "./Nav.css"
 
 const Nav = ({data}) => {
     return(
+
         <div className={`col-12  nav`}>
             <ul className={`d-flex mb-0 justify-content-end col-12 pt-3 px-4`}>
+
                 {
                     data.map(item =>
                         <a href={item.link}>

@@ -4,6 +4,7 @@ import Search from "../Search/Search";
 import CartBtn from "../CartBtn/CartBtn";
 import Nav from "../Nav/Nav";
 import axios from "axios";
+
 import useAxios from "../../hooks/useAxios";
 
 const Header = () => {
@@ -32,6 +33,7 @@ const Header = () => {
             </div>
             :
             <h1>Loading</h1>
+
     )
 
 }

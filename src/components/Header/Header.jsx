@@ -8,7 +8,7 @@ import axios from "axios";
 import useAxios from "../../hooks/useAxios";
 
 const Header = () => {
-
+    console.log("header")
     // const [nav,setNav] = useState([])
 
     const {data, error, loading} = useAxios("menu")
@@ -25,18 +25,20 @@ const Header = () => {
 
     return (
         !loading ?
-            <div className={`d-flex flex-wrap flex-row-reverse justify-content-between align-items-center py-3 px-0`}>
+            <div className={`d-flex flex-wrap flex-row-reverse justify-content-between align-items-center py-3 `}>
+                {console.log("start render header")}
                 <div className={`col-lg-1 px-0`}>
                     <Logo/>
                 </div>
-                <div className={`col-lg-3`}>
+                <div className={`col-lg-4 col-xxl-3`}>
                     <Search/>
                 </div>
                 <div className={`col-lg-1 px-0`}>
                     <CartBtn width={"30px"} height={"30px"}/>
                 </div>
-
+                {console.log(loading, data)}
                 <Nav data={data}/>
+                {console.log("end render header")}
             </div>
             :
             <h1>Loading</h1>

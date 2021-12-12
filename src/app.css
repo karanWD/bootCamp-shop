@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "IRANYekanBakh";
+    src: url("./assets/fonts/IRANSansXV.woff") format("woff"),
+     url("./assets/fonts/IRANSansXV.woff2") format("woff2")
+}
+
+*{
+    font-family: IRANYekanBakh;
+}

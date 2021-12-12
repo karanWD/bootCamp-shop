@@ -1,8 +1,10 @@
+
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Home from "./pages/Home"
 import Layout from "./components/Layout/Layout";
 import "swiper/swiper-bundle.css"
+import "./app.css"
 
 
 

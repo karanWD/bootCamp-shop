@@ -8,11 +8,11 @@ import axios from "axios";
 import useAxios from "../../hooks/useAxios";
 
 const Header = () => {
-    console.log("header")
-    // const [nav,setNav] = useState([])
+    console.log("-- HEADER COMPONENT --")
 
     const {data, error, loading} = useAxios("menu")
 
+    // const [nav,setNav] = useState([])
     // useEffect(()=>{
     //     axios.get("http://localhost:4000/menu")
     //         .then(
@@ -26,7 +26,6 @@ const Header = () => {
     return (
         !loading ?
             <div className={`d-flex flex-wrap flex-row-reverse justify-content-between align-items-center py-3 `}>
-                {console.log("start render header")}
                 <div className={`col-lg-1 px-0`}>
                     <Logo/>
                 </div>
@@ -36,9 +35,7 @@ const Header = () => {
                 <div className={`col-lg-1 px-0`}>
                     <CartBtn width={"30px"} height={"30px"}/>
                 </div>
-                {console.log(loading, data)}
                 <Nav data={data}/>
-                {console.log("end render header")}
             </div>
             :
             <h1>Loading</h1>

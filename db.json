@@ -50,5 +50,211 @@
         }
       ]
     }
+  ],
+  "category": {
+    "men": {
+      "title": "مردانه",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/4871a1ce9f5b0151a9070c675c00aa23ef9d8a22_1634113949.jpg?x-oss-process=image/quality,q_80"
+    },
+    "women": {
+      "title": "زنانه",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/d6ac57b9a9a550ddc1c9c53be7979a6e139341d3_1634115790.jpg?x-oss-process=image/quality,q_80"
+    },
+    "kids": {
+      "title": "بچه گانه",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/d8a15a0c9edb1d57243c53f6d4948c224d8f38ea_1632924458.jpg?x-oss-process=image/quality,q_80"
+    },
+    "sport": {
+      "title": "ورزشی",
+      "image": "https://dkstatics-public.digikala.com/digistyle-mega-menu/e1425fbf3029ec8de4eee988f126a5bf7c2bfcbf_1638711063.jpg"
+    },
+    "accessories": {
+      "title": "اکسسوری",
+      "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/679b86b38a3c3d2890a2eb9c1eb8d0518476122c_1619204496.jpg?x-oss-process=image/quality,q_80"
+    },
+    "shoes": {
+      "title": "کفش",
+      "image": "https://dkstatics-public.digikala.com/digistyle-mega-menu/3acedeeba4e97b037c11b0d6655c62b9e39f4bac_1638696529.jpg"
+    },
+    "shirt": {
+      "title": "پیراهن",
+      "image": "https://dkstatics-public.digikala.com/digikala-brands/e8c475b0b583fa097ff338e109a7fc5eabe7fe55_1634019862.jpg"
+    }
+  },
+  "products": {
+    "items": [
+      {
+        "id": "1",
+        "name": "سوییشرت مردانه باینت کد 563-1",
+        "price": "۵۹۸۰۰۰",
+        "discount": "25",
+        "category": "مردانه",
+        "description": "سویشرت و هودی مردانه باینت",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/117596885.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "2",
+        "name": "کت زنانه ایزی دو مدل 21811377059",
+        "price": "۸۶۷۰۰۰",
+        "discount": "20",
+        "category": "زنانه",
+        "description": " تهیه شده از الیاف نخی طرح چهارخانه",
+        "images": [
+          ""
+        ]
+      },
+      {
+        "id": "3",
+        "name": "پیراهن پسرانه پیانو مدل 1903-59",
+        "price": "۲۳۸۰۰۰",
+        "discount": "40",
+        "category": "بچه گانه",
+        "description": "پیانو/پیراهن پسرانه پیانو",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/e114e7d24459fda29f936b030d247f206437789c_1636443662.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "4",
+        "name": "کلاه کپ مردانه ال سی وایکیکی مدل 8S3350Z8-BORDEAUX",
+        "price": "۱۲۹۰۰۰",
+        "discount": "0",
+        "category": "اکسسوری",
+        "description": "ال سی وایکیکی/سرپوش مردانه ال سی وایکیکی",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/1342340aa75ae68581e0cfc7fabfc5b58c6323cd_1606646771.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "5",
+        "name": "کفش زنانه شهر چرم مدل pc204421",
+        "price": "۵۹۴۰۰۰",
+        "discount": "30",
+        "category": "کفش",
+        "description": "شهر چرم/کفش پاشنه دار زنانه شهر چرم",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/2e7b9c2c0cbf630032f54916c9d9dbadcd71bf0c_1614690522.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "6",
+        "name": "تونیک بافت زنانه سیدونا مدل SI2045-001",
+        "price": "۱۱۸,۰۰۰",
+        "discount": "۶۰",
+        "category": "زنانه",
+        "description": "برند سیدونا به عنوان برند پوشاک خانواده در پاییز 1400 زمانی متولد شد که جای خالی برندی با کیفیت و تنوع زیاد با قیمتهای مناسب و اقتصادی به شدت احساس می شد",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/2ca4b167906cb6294c75836236d1b634dff22548_1638101529.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "7",
+        "name": "نیم بوت دخترانه ال سی وایکیکی مدل W0035Z4-pink",
+        "price": "۲۰۵۲۵۰",
+        "discount": "۲۴",
+        "category": "کفش",
+        "description": "ال سی وایکیکی Lc Waikiki یک برند محبوب پوشاک، کفش و اکسسوری زنانه و مردانه است. این برند که در فرانسه متولد و سپس به ترکیه منتقل شده است، قدمتی 32 ساله دارد",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/70c35c130b940baaed71a2643de98707ce6822fd_1630477951.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "8",
+        "name": "پالتو زنانه سیدونا مدل SI1001-403",
+        "price": "۷۸۰۰۰۰",
+        "discount": "0",
+        "category": "زنانه",
+        "description": "برند سیدونا به عنوان برند پوشاک خانواده در پاییز 1400 زمانی متولد شد که جای خالی برندی با کیفیت و تنوع زیاد با قیمتهای مناسب و اقتصادی به شدت احساس می شد",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/7f537d9006313452cee423520d218ceaa7f6c202_1634629428.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "9",
+        "name": "کاپشن پسرانه لوپیلو کد 8059",
+        "price": "۳۸۰۰۰۰",
+        "discount": "5",
+        "category": "بچه گانه",
+        "description": "لوپیلو/کاپشن پسرانه لوپیلو",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/3e5c141f3b044df8909d073a4fe53848353b5741_1598866792.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "10",
+        "name": "کلاه کپ مردانه ال سی وایکیکی مدل",
+        "price": "۱۲۹,۰۰۰",
+        "discount": "0",
+        "category": "اکسسوری",
+        "description": "ال سی وایکیکی/سرپوش مردانه ال سی وایکیکی",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/1342340aa75ae68581e0cfc7fabfc5b58c6323cd_1606646771.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "11",
+        "name": "ست تی شرت و شلوار پسرانه مادر مدل 317-79",
+        "price": "۲۹۰۰۰۰",
+        "discount": "10",
+        "category": "بچه گانه",
+        "description": "مادر/ست لباس راحتی پسرانه مادر",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/e08e6062e525e69c20df676de1a7bfab490566d3_1613829664.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "12",
+        "name": "سویشرت مردانه تکنیک پلاس 07 کد BT-111-ME",
+        "price": "۴۴۲۸۰۰",
+        "discount": "20",
+        "category": "مردانه",
+        "description": "تکنیک+07/سویشرت و هودی ورزشی مردانه تکنیک+07",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/117528170.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "13",
+        "name": "تاپ ورزشی مردانه تکنیک پلاس 07 کد TS-122-ME",
+        "price": "۱۵۱۲۰۰",
+        "discount": "30",
+        "category": "مردانه",
+        "description": "تکنیک+07/تی شرت و پولوشرت ورزشی مردانه تکنیک+07",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/117503743.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "14",
+        "name": "شال زنانه آلدو مدل 55669908",
+        "price": "۸۷۲۰۰۰",
+        "discount": "۱۰",
+        "category": "اکسسوری",
+        "description": "برند آلدو از جمله برندهای محبوبی است که بسیاری از دوستداران صنعت مد را شیفته خود کرده است. تولیدات این برند معتبر طیف وسیعی از محصولات را به خود اختصاص داده",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/ccf84172fa09abbd768d341cd31ab8e13d5eb2e5_1638797481.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      },
+      {
+        "id": "15",
+        "name": "ساعت مچی عقربه\u200Cای مردانه سواچ مدل YCS112G",
+        "price": "۳۹۰۰۰۰۰",
+        "discount": "0",
+        "category": "اکسسوری",
+        "description": "برند سواچ Swatch یکی از برندهای نام آشنای ساعت انواع ساعت به ویژه ساعت دخترانه، پسرانه، ساعت زنانه و مردانه است که به دلیل کیفیت بالا و تنوع طرحی که دارد در تمام دنیا طرفداران خاص خود را دارد. این برند دارای نمایندگی\u200Cهای متنوعی است",
+        "images": [
+          "https://dkstatics-public.digikala.com/digikala-products/948f9f4d78341a9ee9c44eb75167235c6abec79d_1638605489.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
+        ]
+      }
+    ],
+    "length": 15,
+    "page": 1
+  },
+  "carousel": [
+    "https://dkstatics-public.digikala.com/digikala-adservice-banners/788dc9392fcba8288083206918e4ca32f37385f0_1634116066.jpg?x-oss-process=image/quality,q_80",
+    "https://dkstatics-public.digikala.com/digikala-adservice-banners/47cff4173730db9b3104d3cb07dff170c634db5d_1634115944.jpg?x-oss-process=image/quality,q_80",
+    "https://dkstatics-public.digikala.com/digikala-admin-landing/0847d2e55f7837805f94220dbe541eda933a07da_1638354359.jpg"
   ]
 }

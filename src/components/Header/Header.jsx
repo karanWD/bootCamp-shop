@@ -10,7 +10,6 @@ import useAxios from "../../hooks/useAxios";
 
 
 const Header = () => {
-    console.log("-- HEADER COMPONENT --")
 
     const {data, error, loading} = useAxios("menu")
 
@@ -40,7 +39,7 @@ const Header = () => {
                 <Nav data={data}/>
             </div>
             :
-            <h1>Loading</h1>
+            <h1 className={`text-center col-12`}>Loading</h1>
 
     )
 

@@ -7,3 +7,6 @@
 *{
     font-family: IRANYekanBakh;
 }
+img{
+    object-fit: cover;
+}

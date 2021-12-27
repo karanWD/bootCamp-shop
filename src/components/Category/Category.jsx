@@ -3,10 +3,10 @@ import "./category.css"
 import useAxios from "../../hooks/useAxios";
 
 const Category = () => {
-    const {data, error, loading} = useAxios("category")
+    const {data, error} = useAxios("category")
 
     return (
-        !loading ?
+        !data ?
             <div className={`d-flex categories px-4 py-5`}>
                 <div className={`col-lg-7 d-flex flex-wrap `}>
                     <div className={`col-lg-4  p-1 position-relative`}>

@@ -7,7 +7,7 @@ import useAxios from "../../hooks/useAxios";
 
 const Header = () => {
 
-    const {data, error, loading} = useAxios("menu")
+    const {data, error} = useAxios("menu")
 
     // const [nav,setNav] = useState([])
     // useEffect(()=>{
@@ -21,7 +21,7 @@ const Header = () => {
 
 
     return (
-        !loading ?
+        !data ?
             <div className={`d-flex flex-wrap flex-row-reverse justify-content-between align-items-center py-3 `}>
                 <div className={`col-lg-1 px-0`}>
                     <Logo/>

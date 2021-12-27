@@ -1,11 +1,11 @@
 @font-face {
-    font-family: "IRANYekanBakh";
+    font-family: "IRANSans";
     src: url("./assets/fonts/IRANSansXV.woff") format("woff"),
-     url("./assets/fonts/IRANSansXV.woff2") format("woff2")
+    url("./assets/fonts/IRANSansXV.woff2") format("woff2")
 }
 
 *{
-    font-family: IRANYekanBakh;
+    font-family: IRANSans;
 }
 img{
     object-fit: cover;

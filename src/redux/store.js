@@ -5,4 +5,6 @@ import {logger} from "redux-logger/src";
 
 const middleware = [logger]
 
-export const store = createStore(rootReducer,applyMiddleware(...middleware))
+const store = createStore(rootReducer,applyMiddleware(...middleware))
+
+export default store

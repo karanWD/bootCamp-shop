@@ -51,6 +51,11 @@
       ]
     }
   ],
+  "carousel": [
+    "https://dkstatics-public.digikala.com/digikala-adservice-banners/788dc9392fcba8288083206918e4ca32f37385f0_1634116066.jpg?x-oss-process=image/quality,q_80",
+    "https://dkstatics-public.digikala.com/digikala-adservice-banners/47cff4173730db9b3104d3cb07dff170c634db5d_1634115944.jpg?x-oss-process=image/quality,q_80",
+    "https://dkstatics-public.digikala.com/digikala-admin-landing/0847d2e55f7837805f94220dbe541eda933a07da_1638354359.jpg"
+  ],
   "category": {
     "men": {
       "title": "مردانه",
@@ -251,10 +256,5 @@
     ],
     "length": 15,
     "page": 1
-  },
-  "carousel": [
-    "https://dkstatics-public.digikala.com/digikala-adservice-banners/788dc9392fcba8288083206918e4ca32f37385f0_1634116066.jpg?x-oss-process=image/quality,q_80",
-    "https://dkstatics-public.digikala.com/digikala-adservice-banners/47cff4173730db9b3104d3cb07dff170c634db5d_1634115944.jpg?x-oss-process=image/quality,q_80",
-    "https://dkstatics-public.digikala.com/digikala-admin-landing/0847d2e55f7837805f94220dbe541eda933a07da_1638354359.jpg"
-  ]
+  }
 }

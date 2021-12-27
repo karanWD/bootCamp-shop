@@ -9,7 +9,7 @@ const Home = () => {
         <div>
             {console.log("home")}
            <Carousel/>
-           <Category/>
+           {/*<Category/>*/}
         </div>
     )
 }

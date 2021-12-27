@@ -3,11 +3,7 @@ import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
 import CartBtn from "../CartBtn/CartBtn";
 import Nav from "../Nav/Nav";
-import axios from "axios";
-
 import useAxios from "../../hooks/useAxios";
-
-
 
 const Header = () => {
 

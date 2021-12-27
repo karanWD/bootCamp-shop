@@ -2,34 +2,27 @@ import React, {useState, useEffect} from "react"
 import axios from "axios";
 
 
-const useAxios = (endpoint) => {
+const useAxios = (endpoint,dependecy,option) => {
 
     const [data, setData] = useState([])
-    const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        const fetch = async () => {
-            try {
-                await setLoading(true)
-                await axios.get(`http://localhost:4000/${endpoint}`)
+
+                 axios.get(`http://localhost:4000/${endpoint}${option}`)
                     .then(
                         (res) => {
                             setData(res.data)
                         }
                     )
-            } catch (e) {
-                await setError(e)
-            } finally {
-                await setLoading(false)
-            }
-        }
+                     .cathch(e => console.log(e))
 
-        fetch()
 
-    }, [endpoint])
 
-    return {data, error, loading}
+
+    }, [dependecy])
+
+    return {data, error,}
 }
 
 export default useAxios

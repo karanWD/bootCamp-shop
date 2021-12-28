@@ -8,6 +8,7 @@ const Search = () => {
     const dispatch = useDispatch()
     const searchRes = useSelector(state => state.searchReducer.search)
     const [query, setQuery] = useState()
+    const [activeSearch, setActiveSearch] = useState(0)
 
     useEffect(() => {
         if (query) {
@@ -18,11 +19,31 @@ const Search = () => {
         }
     }, [query])
 
+    const keyHandler = (e) => {
+        if (searchRes?.length>0){
+            if (e.which === 38) {
+                if (activeSearch === 0) {
+                    setActiveSearch(searchRes.length - 1)
+                } else {
+                    setActiveSearch(prevState => prevState - 1)
+                }
+            } else if (e.which === 40) {
+                if (activeSearch === searchRes.length - 1) {
+                    setActiveSearch(0)
+                } else {
+                    setActiveSearch(prevState => prevState + 1)
+                }
+            }
+        }
+    }
+
     return (
         <div className={`search d-flex flex-row-reverse p-2 position-relative`}>
-            <input type="text" className={`rtl col-lg-8 text-end`} placeholder={`نام محصول و دسته و ...`}
-                   onChange={e => setQuery(e.target.value)}/>
-            <button className={`col-lg-4`}>جستجو</button>
+            <input type="text" className={`rtl col-lg-12 text-end`} placeholder={`نام محصول و دسته و ...`}
+                   onChange={e => setQuery(e.target.value)}
+                   onKeyDown={keyHandler}
+            />
+            {/*<button className={`col-lg-4`}>جستجو</button>*/}
             {
                 searchRes ?
                     <div style={{
@@ -38,14 +59,14 @@ const Search = () => {
                         <ul>
                             {
                                 searchRes.length > 0 ?
-                                    searchRes.map(item =>
-                                        <li className={`text-end py-2 px-2`}>
+                                    searchRes.map((item, i) =>
+                                        <li className={`text-end py-2 px-2 ${activeSearch === i ? `bg-success` : ``}`}>
                                             {item.name}
                                         </li>
                                     )
                                     :
-                                    <li  className={`text-end py-2 px-2`}>No Search Result </li>
-                            }                             
+                                    <li className={`text-end py-2 px-2`}>No Search Result </li>
+                            }
                         </ul>
                     </div>
                     :

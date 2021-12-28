@@ -5,6 +5,7 @@ import {useDispatch} from "react-redux";
 const useDispatchAxios = (endpoint,setData,dependency) => {
     const dispatch = useDispatch()
     useEffect(()=>{
+        console.log(endpoint)
         axios.get(`http://localhost:4000/${endpoint}`)
             .then(
                 (res) => {

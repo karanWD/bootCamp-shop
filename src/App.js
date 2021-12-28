@@ -7,7 +7,6 @@ import "swiper/swiper-bundle.css"
 import "./app.css"
 import {Provider} from "react-redux";
 import store from "./redux/store";
-import Counter from "./components/Counter/Counter";
 import Count from "./components/Count/Count";
 
 
@@ -16,11 +15,8 @@ function App() {
         <div className="App">
             <Provider store={store}>
                 <Layout>
-                    <Home/>
                     {console.log("app")}
-                    {/*Counter with Two Actions*/}
-                    <Counter/>
-                    {/*Counter with One Action*/}
+                    <Home/>
                     <Count/>
                 </Layout>
             </Provider>

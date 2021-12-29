@@ -3,6 +3,7 @@ import "./Search.css"
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchSearch} from "../../redux/Search/search-actions";
+import {Link} from "react-router-dom"
 
 const Search = () => {
     const dispatch = useDispatch()
@@ -20,7 +21,7 @@ const Search = () => {
     }, [query])
 
     const keyHandler = (e) => {
-        if (searchRes?.length>0){
+        if (searchRes?.length > 0) {
             if (e.which === 38) {
                 if (activeSearch === 0) {
                     setActiveSearch(searchRes.length - 1)
@@ -60,9 +61,11 @@ const Search = () => {
                             {
                                 searchRes.length > 0 ?
                                     searchRes.map((item, i) =>
-                                        <li className={`text-end py-2 px-2 ${activeSearch === i ? `bg-success` : ``}`}>
-                                            {item.name}
-                                        </li>
+                                        <Link to={`/products/${item.id}`} >
+                                            <li className={`text-end py-2 px-2 ${activeSearch === i ? `bg-success` : ``}`}>
+                                                {item.name}
+                                            </li>
+                                        </Link>
                                     )
                                     :
                                     <li className={`text-end py-2 px-2`}>No Search Result </li>

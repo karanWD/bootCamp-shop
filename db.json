@@ -1,6 +1,11 @@
 {
   "menu": [
     {
+      "title": "خانه",
+      "link": "/",
+      "subMenu": []
+    },
+    {
       "title": "کالای دیجیتال",
       "link": "",
       "subMenu": [

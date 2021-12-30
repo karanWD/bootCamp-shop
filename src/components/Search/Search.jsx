@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import "./Search.css"
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchSearch} from "../../redux/Search/search-actions";
+import {fetchSearch} from "../../redux/search/search-actions";
 
 const Search = () => {
     const dispatch = useDispatch()
@@ -22,7 +22,7 @@ const Search = () => {
         <div className={`search d-flex flex-row-reverse p-2 position-relative`}>
             <input type="text" className={`rtl col-lg-8 text-end`} placeholder={`نام محصول و دسته و ...`}
                    onChange={e => setQuery(e.target.value)}/>
-            <button className={`col-lg-4`}>جستجو</button>
+            {/*<button className={`col-lg-4`}>جستجو</button>*/}
             {
                 searchRes ?
                     <div style={{

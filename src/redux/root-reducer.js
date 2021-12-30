@@ -2,7 +2,7 @@ import {combineReducers} from "redux";
 import {countReducer} from "./Count/count-reducer";
 import {menuReducer} from "./Menu/menu-reducer";
 import {carouselReducer} from "./carousel/carousel-reducer";
-import {searchReducer} from "./Search/search-reducer";
+import {searchReducer} from "./search/search-reducer";
 
 export default combineReducers({
     countReducer:countReducer,

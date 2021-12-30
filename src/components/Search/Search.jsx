@@ -31,21 +31,26 @@ const Search = () => {
                         right: "0",
                         width: "100%",
                         maxHeight: "350px",
-                        backgroundColor: "#f5f5f5",
+                        backgroundColor: "#fff",
                         zIndex: "10",
                         overflow: "auto"
                     }}>
-                        <ul>
+                        <ul className={`ps-0`}>
                             {
                                 searchRes.length > 0 ?
                                     searchRes.map(item =>
-                                        <li className={`text-end py-2 px-2`}>
+                                        <li className={`text-end py-3 px-2`}
+                                            style={{
+                                                listStyle: "none",
+                                                borderBottom: "1px solid #eee",
+                                                fontSize:"14px",
+                                            }}>
                                             {item.name}
                                         </li>
                                     )
                                     :
-                                    <li  className={`text-end py-2 px-2`}>No Search Result </li>
-                            }                             
+                                    <li className={`text-end py-3 px-2`}>No Search Result </li>
+                            }
                         </ul>
                     </div>
                     :

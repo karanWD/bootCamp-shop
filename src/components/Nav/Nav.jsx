@@ -1,6 +1,6 @@
 import React from "react"
 import "./Nav.css"
-import {Link, useResolvedPath, useMatch, resolvePath} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 const Nav = ({data}) => {
     return (
@@ -10,7 +10,7 @@ const Nav = ({data}) => {
 
                 {
                     data.map(item =>
-                        <CustomLink to={item.link}>
+                        <Link to={item.link}>
                             <li>
                                 {item.title}
                                 {item.subMenu.length > 0 ?
@@ -28,30 +28,12 @@ const Nav = ({data}) => {
                                 }
 
                             </li>
-                        </CustomLink>
+                        </Link>
                     )
                 }
             </ul>
         </div>
     )
-}
-
-function CustomLink({children, to, ...props}) {
-    let resolved = useResolvedPath(to);
-    let match = useMatch({path: resolved.pathname, end: true});
-    console.log(resolved, match)
-    return (
-        <div>
-            <Link
-                style={{textDecoration: match ? "underline" : "none"}}
-                to={to}
-                {...props}
-            >
-                {children}
-            </Link>
-            {match && " (active)"}
-        </div>
-    );
 }
 
 export default Nav

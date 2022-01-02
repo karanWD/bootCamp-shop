@@ -3,15 +3,17 @@ import "./Search.css"
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchSearch} from "../../redux/Search/search-actions";
-import {Link} from "react-router-dom"
+import {Link, Navigate, useNavigate} from "react-router-dom"
 
 const Search = () => {
     const dispatch = useDispatch()
+    let navigate = useNavigate()
     const searchRes = useSelector(state => state.searchReducer.search)
     const [query, setQuery] = useState()
     const [activeSearch, setActiveSearch] = useState(0)
 
     useEffect(() => {
+        setActiveSearch(0)
         if (query) {
             axios.get(`http://localhost:4000/suggestion?q=${query}`)
                 .then(res => dispatch(fetchSearch(res.data)))
@@ -28,12 +30,17 @@ const Search = () => {
                 } else {
                     setActiveSearch(prevState => prevState - 1)
                 }
-            } else if (e.which === 40) {
+            }
+            else if (e.which === 40) {
                 if (activeSearch === searchRes.length - 1) {
                     setActiveSearch(0)
                 } else {
                     setActiveSearch(prevState => prevState + 1)
                 }
+            }
+            else if (e.which === 13) {
+                console.log(searchRes[activeSearch].id)
+                navigate(`/products/${searchRes[activeSearch].id}`)
             }
         }
     }
@@ -47,22 +54,13 @@ const Search = () => {
             {/*<button className={`col-lg-4`}>جستجو</button>*/}
             {
                 searchRes ?
-                    <div style={{
-                        position: "absolute",
-                        top: "100%",
-                        right: "0",
-                        width: "100%",
-                        maxHeight: "350px",
-                        backgroundColor: "#f5f5f5",
-                        zIndex: "10",
-                        overflow: "auto"
-                    }}>
-                        <ul>
+                    <div className={`search-suggest`}>
+                        <ul className={`ps-0 mb-0`}>
                             {
                                 searchRes.length > 0 ?
                                     searchRes.map((item, i) =>
-                                        <Link to={`/products/${item.id}`} >
-                                            <li className={`text-end py-2 px-2 ${activeSearch === i ? `bg-success` : ``}`}>
+                                        <Link to={`/products/${item.id}`}>
+                                            <li className={`text-end py-3 px-2 ${activeSearch === i ? `active-search-item` : ``}`}>
                                                 {item.name}
                                             </li>
                                         </Link>

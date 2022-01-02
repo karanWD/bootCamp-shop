@@ -27,12 +27,16 @@ const Search = () => {
                 } else {
                     setActiveSearch(prevState => prevState - 1)
                 }
-            } else if (e.which === 40) {
+            }
+            else if (e.which === 40) {
                 if (activeSearch === searchRes.length - 1) {
                     setActiveSearch(0)
                 } else {
                     setActiveSearch(prevState => prevState + 1)
                 }
+            }
+            else if (e.which===13){
+                console.log(searchRes[activeSearch].id)
             }
         }
     }
@@ -46,21 +50,12 @@ const Search = () => {
             {/*<button className={`col-lg-4`}>جستجو</button>*/}
             {
                 searchRes ?
-                    <div style={{
-                        position: "absolute",
-                        top: "100%",
-                        right: "0",
-                        width: "100%",
-                        maxHeight: "350px",
-                        backgroundColor: "#f5f5f5",
-                        zIndex: "10",
-                        overflow: "auto"
-                    }}>
-                        <ul>
+                    <div className={`search-suggest`}>
+                        <ul className={`ps-0 mb-0`}>
                             {
                                 searchRes.length > 0 ?
                                     searchRes.map((item, i) =>
-                                        <li className={`text-end py-2 px-2 ${activeSearch === i ? `bg-success` : ``}`}>
+                                        <li className={`text-end py-3 px-3 ${activeSearch === i ? `active-search-item` : ``}`}>
                                             {item.name}
                                         </li>
                                     )

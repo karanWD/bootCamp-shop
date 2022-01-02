@@ -1,3 +1,3 @@
 export const menuActionType = {
-    FETCH:"FETCH"
+    FETCH_MENU:"FETCH_MENU"
 }

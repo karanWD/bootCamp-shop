@@ -6,7 +6,7 @@ const INITIALSTATE = {
 
 export const menuReducer = (state=INITIALSTATE,action) => {
     switch (action.type) {
-        case menuActionType.FETCH :
+        case menuActionType.FETCH_MENU :
             return {
                 ...state,
                 menu:action.payload

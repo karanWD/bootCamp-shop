@@ -1,17 +1,18 @@
 import {carouselActionType} from "./carouselActionType";
 
 const INITIALSTATE = {
-    carouselData : []
+    carouselData: []
 }
 
-export const carouselReducer = (state=INITIALSTATE,action) => {
+export const carouselReducer = (state = INITIALSTATE, action) => {
     switch (action.type) {
         case(carouselActionType.FETCH_CAROUSEL) :
-             return {
-                 ...state,
-                 carouselData:action.payload
-             }
-        default : return state
+            return {
+                ...state,
+                carouselData: action.payload
+            }
+        default :
+            return state
     }
 }
 

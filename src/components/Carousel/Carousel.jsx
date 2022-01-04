@@ -15,7 +15,7 @@ const Carousel = () => {
     return (
         <Swiper navigation={true} className="mySwiper">
             {
-                carouselData?.map(item =>
+                carouselData.length>0 && carouselData?.map(item =>
                     <SwiperSlide>
                         <img className={`col-12 px-0`} src={item} alt=""/>
                     </SwiperSlide>

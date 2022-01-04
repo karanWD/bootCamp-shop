@@ -5,6 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchSearch} from "../../redux/Search/search-actions";
 import {Link, Navigate, useNavigate} from "react-router-dom"
 
+
 const Search = () => {
     const dispatch = useDispatch()
     let navigate = useNavigate()
@@ -67,6 +68,7 @@ const Search = () => {
                                     )
                                     :
                                     <li className={`text-end py-2 px-2`}>No Search Result </li>
+
                             }
                         </ul>
                     </div>

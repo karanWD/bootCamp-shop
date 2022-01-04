@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import "./Search.css"
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchSearch} from "../../redux/Search/search-actions";
+import {fetchSearch} from "../../redux/search/search-actions";
 import {Link, Navigate, useNavigate} from "react-router-dom"
 
 

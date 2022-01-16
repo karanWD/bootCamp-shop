@@ -40,7 +40,7 @@ const Search = () => {
                 }
             }
             else if (e.which === 13) {
-                console.log(searchRes[activeSearch].id)
+                dispatch(fetchSearch())
                 navigate(`/products/${searchRes[activeSearch].id}`)
             }
         }

@@ -3,7 +3,7 @@ import "./Search.css"
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchSearch} from "../../redux/search/search-actions";
-import {Link, Navigate, useNavigate} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 
 
 const Search = () => {
@@ -40,8 +40,9 @@ const Search = () => {
                 }
             }
             else if (e.which === 13) {
-                console.log(searchRes[activeSearch].id)
+                // console.log(searchRes[activeSearch].id)
                 navigate(`/products/${searchRes[activeSearch].id}`)
+                dispatch(fetchSearch())
             }
         }
     }

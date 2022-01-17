@@ -6,6 +6,10 @@ import axios from "axios";
 
 
 const Count = () => {
+    const params = useParams()
+
+    console.log(params)
+
     const count = useSelector(state => state.countReducer.count)
     const dispatch = useDispatch()
     const {productId} = useParams()

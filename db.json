@@ -925,5 +925,13 @@
       ],
       "quantity": 10
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "pass": "123",
+      "token": "123"
+    }
   ]
 }

@@ -8,7 +8,7 @@ import {Provider} from "react-redux";
 import store from "./redux/store";
 import Count from "./components/Count/Count";
 import {BrowserRouter, Route, Routes, Outlet} from "react-router-dom";
-
+import Detail from "./pages/Detail";
 
 function App() {
     return (
@@ -17,7 +17,7 @@ function App() {
                 <Provider store={store}>
                     <Routes>
                         <Route path={`/`} element={<Layout/>}>
-                            <Route index element={<Home/>} />
+                            <Route index element={<Home/>}/>
                             <Route path={`products/:productId`} element={<Detail/>}/>
                             <Route path={'*'} element={<div>404 Sorry , NOT FOUND</div>}/>
                         </Route>

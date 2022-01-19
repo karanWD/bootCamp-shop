@@ -249,11 +249,11 @@
       },
       {
         "id": "15",
-        "name": "ساعت مچی عقربه\u200Cای مردانه سواچ مدل YCS112G",
+        "name": "ساعت مچی عقربه‌ای مردانه سواچ مدل YCS112G",
         "price": "۳۹۰۰۰۰۰",
         "discount": "0",
         "category": "اکسسوری",
-        "description": "برند سواچ Swatch یکی از برندهای نام آشنای ساعت انواع ساعت به ویژه ساعت دخترانه، پسرانه، ساعت زنانه و مردانه است که به دلیل کیفیت بالا و تنوع طرحی که دارد در تمام دنیا طرفداران خاص خود را دارد. این برند دارای نمایندگی\u200Cهای متنوعی است",
+        "description": "برند سواچ Swatch یکی از برندهای نام آشنای ساعت انواع ساعت به ویژه ساعت دخترانه، پسرانه، ساعت زنانه و مردانه است که به دلیل کیفیت بالا و تنوع طرحی که دارد در تمام دنیا طرفداران خاص خود را دارد. این برند دارای نمایندگی‌های متنوعی است",
         "images": [
           "https://dkstatics-public.digikala.com/digikala-products/948f9f4d78341a9ee9c44eb75167235c6abec79d_1638605489.jpg?x-oss-process=image/resize,w_1600/quality,q_80"
         ]
@@ -887,11 +887,11 @@
     },
     {
       "id": "15",
-      "name": "ساعت مچی عقربه\u200Cای مردانه سواچ مدل YCS112G",
+      "name": "ساعت مچی عقربه‌ای مردانه سواچ مدل YCS112G",
       "price": "369000",
       "discount": "0",
       "category": "اکسسوری",
-      "description": "برند سواچ Swatch یکی از برندهای نام آشنای ساعت انواع ساعت به ویژه ساعت دخترانه، پسرانه، ساعت زنانه و مردانه است که به دلیل کیفیت بالا و تنوع طرحی که دارد در تمام دنیا طرفداران خاص خود را دارد. این برند دارای نمایندگی\u200Cهای متنوعی است",
+      "description": "برند سواچ Swatch یکی از برندهای نام آشنای ساعت انواع ساعت به ویژه ساعت دخترانه، پسرانه، ساعت زنانه و مردانه است که به دلیل کیفیت بالا و تنوع طرحی که دارد در تمام دنیا طرفداران خاص خود را دارد. این برند دارای نمایندگی‌های متنوعی است",
       "images": [
         "https://dkstatics-public.digikala.com/digikala-products/948f9f4d78341a9ee9c44eb75167235c6abec79d_1638605489.jpg?x-oss-process=image/resize,w_1600/quality,q_80",
         "https://dkstatics-public.digikala.com/digikala-products/948f9f4d78341a9ee9c44eb75167235c6abec79d_1638605489.jpg?x-oss-process=image/resize,w_1600/quality,q_80",
@@ -928,10 +928,10 @@
   ],
   "users": [
     {
-      "id": 1,
       "name": "admin",
       "pass": "123",
-      "token": "123"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJwYXNzIjoiMTIzIiwiaWF0IjoxNjQyNTY3MzE0fQ.2TMvsct9UL7b1bA6i5Lqe2rfE4OL5iz-FOxv0z0403U",
+      "id": 2
     }
   ]
 }

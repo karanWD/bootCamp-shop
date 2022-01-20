@@ -12,8 +12,8 @@ const Detail = () => {
 
 
     return (
-        <div>
-            detail
+        <div className={`text-center d-flex flex-wrap align-items-center justify-content-center`}>
+            Detail
         </div>
     )
 }

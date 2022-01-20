@@ -6,10 +6,10 @@ import "swiper/swiper-bundle.css"
 import "./app.css"
 import {Provider} from "react-redux";
 import store from "./redux/store";
-import Count from "./components/Count/Count";
 import {BrowserRouter, Route, Routes, Outlet} from "react-router-dom";
 import Detail from "./pages/Detail";
-import Signup from "./pages/Signup";
+import SignUp from "./pages/Signup";
+import SignIn from "./pages/SignIn";
 
 function App() {
     return (
@@ -20,7 +20,8 @@ function App() {
                         <Route path={`/`} element={<Layout/>}>
                             <Route index element={<Home/>}/>
                             <Route path={`products/:productId`} element={<Detail/>}/>
-                            <Route path={`signup`} element={<Signup/>}/>
+                            <Route path={`signup`} element={<SignUp/>}/>
+                            <Route path={`signin`} element={<SignIn/>}/>
                             <Route path={'*'} element={<div>404 Sorry , NOT FOUND</div>}/>
                         </Route>
                         <Route path={'*'} element={<div>404 Sorry , NOT FOUND</div>}/>

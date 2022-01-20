@@ -7,6 +7,7 @@ import Gallery from "../components/Gallery/Gallery";
 import ProductInfo from "../components/ProductInfo/ProductInfo";
 
 
+
 const Detail = () => {
     const {productId} = useParams()
     const endpoint = `suggestion/${productId}`

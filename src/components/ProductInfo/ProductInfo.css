@@ -3,20 +3,27 @@
 }
 .product-info h6{
     color:#777;
+    font-size:14px;
 }
 .product-sizes ul li{
     list-style: none;
-    border:1px solid #999;
+    border:1px solid #ddd;
     margin:0 5px;
     border-radius: 10px;
     color:#444;
+    cursor:pointer;
+}
+.product-sizes ul li:hover{
+    /*border:1px solid #999;*/
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 .product-colors ul {
     list-style: none;
 }
 .product-colors ul li > div{
     font-size:12px;
-    color:#444
+    color:#444;
+    cursor: pointer;
 }
 .product-color-item{
     width: 50px;
@@ -34,7 +41,6 @@
     color: #999;
     font-size: 12px;
 }
-
 .discount{
     font-weight: normal;
     font-size: 14px;
@@ -56,4 +62,18 @@
     align-items: center;
     justify-content: center;
 }
-
+.selectedSize{
+    background-color:#3e4ddb;
+    color:white !important;
+}
+.check-container{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #3e4ddb;
+    padding: 2.5px;
+    border-radius: 5px;
+}

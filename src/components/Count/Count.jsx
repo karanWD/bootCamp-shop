@@ -1,28 +1,17 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {calc, decrement, increment} from "../../redux/Count/count-actions";
-import {useParams} from "react-router-dom";
-import axios from "axios";
+import "./Count.css"
 
 
-const Count = () => {
-    const params = useParams()
+const Count = ({quantity}) => {
 
-    console.log(params)
-
+    console.log(quantity)
     const count = useSelector(state => state.countReducer.count)
     const dispatch = useDispatch()
-    const {productId} = useParams()
-    console.log(productId)
-    useEffect(() => {
-        axios.get(`http://localhost:4000/suggestion?id=${productId}`)
-            .then(
-                res => console.log(res.data)
-            )
-    }, [productId])
 
     return (
-        <div className={`d-flex align-items-center`}>
+        <div className={`d-flex flex-row-reverse me-0 ms-auto align-items-center mt-4 counter`}>
 
             {/**** Counter With Two Seperate Actions ****/}
 
@@ -34,14 +23,13 @@ const Count = () => {
             {/*    <button onClick={()=>dispatch(decrement())}>-</button>*/}
             {/*</div>*/}
 
-
             {/**** Counter With Just One Action *****/}
-            <button className={`mx-4`} onClick={() => dispatch(calc(+1))}> +</button>
-            <div>
+
+            <button className={`ml-2`} onClick={() =>count < quantity && dispatch(calc(+1))}>+</button>
+            <div className={`px-4`}>
                 {count}
             </div>
-            <button className={`mx-4`} onClick={() => dispatch(calc(-1))}> -</button>
-
+            <button className={`mr-2`} onClick={() =>count> 1 && dispatch(calc(-1))}>-</button>
         </div>
     )
 }

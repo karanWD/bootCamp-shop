@@ -1,0 +1,12 @@
+.counter{
+    border:1px solid #ddd;
+    width: fit-content;
+    border-radius: 5px;
+}
+.counter button{
+    background-color: #eee;
+    border:none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 22px;
+}

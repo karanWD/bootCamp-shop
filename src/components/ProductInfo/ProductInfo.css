@@ -77,3 +77,14 @@
     padding: 2.5px;
     border-radius: 5px;
 }
+.error-alert{
+    position:fixed;
+    bottom:10px;
+    left:50%;
+    transform : translateX(-50%);
+    background-color: red;
+    color:white;
+    width: 30%;
+    border-radius: 15px;
+    padding:15px;
+}

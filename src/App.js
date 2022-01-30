@@ -7,27 +7,29 @@ import "swiper/swiper-bundle.css"
 import "./app.css"
 import {Provider} from "react-redux";
 import store from "./redux/store";
-import Count from "./components/Count/Count";
-import {BrowserRouter, Route, Routes, Outlet} from "react-router-dom";
-
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import AlertContainer from "./components/AlertContainer/AlertContainer";
 
 function App() {
     return (
         <div className="App">
             <BrowserRouter>
                 <Provider store={store}>
-                    <Routes>
-                        <Route path={`/`} element={<Layout/>}>
-                            <Route index element={<Home/>} />
-                            <Route path={`products/:productId`} element={<Detail/>}/>
+                    <AlertContainer>
+                        <Routes>
+                            <Route path={`/`} element={<Layout/>}>
+                                <Route index element={<Home/>}/>
+                                <Route path={`products/:productId`} element={<Detail/>}/>
+                                <Route path={'*'} element={<div>404 Sorry , NOT FOUND</div>}/>
+                            </Route>
                             <Route path={'*'} element={<div>404 Sorry , NOT FOUND</div>}/>
-                        </Route>
-                        <Route path={'*'} element={<div>404 Sorry , NOT FOUND</div>}/>
-                    </Routes>
+                        </Routes>
+                    </AlertContainer>
                 </Provider>
             </BrowserRouter>
         </div>
     );
 }
+
 
 export default App;

@@ -1,8 +1,10 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./ProductInfo.css"
 import Count from "../Count/Count";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
+import {setAlert} from "../../redux/Alert/Alert-actions";
+import AlertCart from "../AlertCart/AlertCart";
 
 const ProductInfo = ({data}) => {
 
@@ -16,7 +18,8 @@ const ProductInfo = ({data}) => {
 
     const count = useSelector(state => state.countReducer.count)
 
-    console.log(errors)
+    const dispatch = useDispatch()
+
 
     const addToCartHandler = () => {
         if (selectedSize) {
@@ -30,7 +33,7 @@ const ProductInfo = ({data}) => {
                 }
                 axios.post("http://localhost:4000/cart", {
                     ...cartData
-                }).then(res => console.log(res))
+                }).then(res => dispatch(setAlert(<AlertCart/>)) )
                     .catch(e => console.log(e))
 
             } else {

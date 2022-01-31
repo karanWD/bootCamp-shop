@@ -7,6 +7,7 @@ import {categoryReducer} from "./category/category-reducer";
 
 import {searchReducer} from "./search/search-reducer";
 import {detailReducer} from "./Detail/detail-reducer";
+import {modalReducer} from "./Modal/modal-reducer";
 
 
 export default combineReducers({
@@ -15,5 +16,6 @@ export default combineReducers({
     carouselReducer:carouselReducer,
     categoryReducer:categoryReducer,
     searchReducer:searchReducer,
-    detailReducer:detailReducer
+    detailReducer:detailReducer,
+    modalReducer:modalReducer
 })

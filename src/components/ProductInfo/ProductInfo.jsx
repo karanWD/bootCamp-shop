@@ -1,10 +1,13 @@
 import React, {useState} from "react";
 import "./ProductInfo.css"
 import Count from "../Count/Count";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
+import {setModal} from "../../redux/Modal/modal-actions";
+import SucceedAlert from "../SucceedAlert/SucceedAlert";
 
 const ProductInfo = ({data}) => {
+
 
     const [selectedColor, setSelectedColor] = useState()
     const [selectedSize, setSelectedSize] = useState()
@@ -15,8 +18,7 @@ const ProductInfo = ({data}) => {
     const [errors,setErros] = useState({})
 
     const count = useSelector(state => state.countReducer.count)
-
-    console.log(errors)
+    const dispatch = useDispatch()
 
     const addToCartHandler = () => {
         if (selectedSize) {
@@ -28,12 +30,12 @@ const ProductInfo = ({data}) => {
                     color: data.colors.find(item => item.id === selectedColor),
                     count: count
                 }
-                axios.post("http://localhost:4000/cart", {
-                    ...cartData
-                }).then(res => console.log(res))
-                    .catch(e => console.log(e))
 
-            } else {
+                localStorage.setItem("cart",JSON.stringify(cartData))
+                dispatch(setModal(<SucceedAlert text={"محصول مورد نظر با موفقیت افزوده شد"} />))
+
+            }
+            else {
                 // setColorError("لطفا رنگ را انتخاب کنید")
                 setErros( prevState => {
                     return{
@@ -109,6 +111,7 @@ const ProductInfo = ({data}) => {
                     )}
                 </ul>
             </div>
+
             <div className={`product-colors mt-4`}>
                 <h6>رنگ</h6>
                 {

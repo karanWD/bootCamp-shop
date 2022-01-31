@@ -1,0 +1,18 @@
+.success-alert-text{
+    text-align: center;
+}
+.continue-btn{
+    background-color: #eee;
+    border:1px solid #ddd;
+    padding: 10px 25px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+.buy-btn{
+    background-color: #3e4ddb;
+    padding: 10px 25px;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-size: 14px;
+}

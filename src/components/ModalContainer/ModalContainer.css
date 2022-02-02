@@ -1,0 +1,10 @@
+.modal-container{
+    box-shadow: 0 0 50px rgba(0,0,0,0.2);
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding:50px 20px ;
+    border-radius: 15px;
+}

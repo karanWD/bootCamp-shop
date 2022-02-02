@@ -9,6 +9,7 @@ import {Provider} from "react-redux";
 import store from "./redux/store";
 import Count from "./components/Count/Count";
 import {BrowserRouter, Route, Routes, Outlet} from "react-router-dom";
+import Cart from "./pages/Cart";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                         <Route path={`/`} element={<Layout/>}>
                             <Route index element={<Home/>} />
                             <Route path={`products/:productId`} element={<Detail/>}/>
+                            <Route path={"cart"} element={<Cart/>} />
                             <Route path={'*'} element={<div>404 Sorry , NOT FOUND</div>}/>
                         </Route>
                         <Route path={'*'} element={<div>404 Sorry , NOT FOUND</div>}/>

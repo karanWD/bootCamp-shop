@@ -1,11 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 
-const Cart = ()=>{
-    const data =JSON.parse(localStorage.getItem("cart"))
+const Cart = () => {
+    const navigate = useNavigate()
+    const data = JSON.parse(localStorage.getItem("cart"))
+    const token = JSON.parse(localStorage.getItem("token"))
 
-    console.log(typeof (data))
+    useEffect(() => {
+        if (!token) {
+            navigate("/login")
+        }
+    },[])
 
-    return(
+    return (
         <div>
             {data?.name}
         </div>

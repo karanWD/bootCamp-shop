@@ -1,10 +1,16 @@
 import React from "react";
 
-const Input = ({name,type,value,placeHolder}) => {
+const Input = ({label, name, type, value, placeHolder, changeHandler}) => {
     return (
-        <div className={`my-3 text-start mx-auto col-lg-3`}>
-            <label className={`d-block`}>{name}</label>
-            <input name={name} type={type} value={value} placeholder={placeHolder}/>
+        <div className={`my-3`}>
+            <label className={`d-block`}>{label}</label>
+            <input className={`col-12`}
+                   name={name}
+                   type={type}
+                   value={value}
+                   placeholder={placeHolder}
+                   onChange={(e) => changeHandler(name, e.target.value)}
+            />
         </div>
     )
 }

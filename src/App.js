@@ -24,10 +24,11 @@ function App() {
                             <Route index element={<Home/>} />
                             <Route path={`products/:productId`} element={<Detail/>}/>
                             <Route path={"cart"} element={<Cart/>} />
-                            <Route path={"login"} element={<Login/>} />
-                            <Route path={"signup"} element={<Signup/>} />
+
                             <Route path={'*'} element={<div>404 Sorry , NOT FOUND</div>}/>
                         </Route>
+                        <Route path={"login"} element={<Login/>} />
+                        <Route path={"signup"} element={<Signup/>} />
                         <Route path={'*'} element={<div>404 Sorry , NOT FOUND</div>}/>
                     </Routes>
                 </Provider>

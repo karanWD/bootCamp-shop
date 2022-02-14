@@ -972,5 +972,18 @@
       "count": 1,
       "id": 3
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "ali",
+      "password": "123"
+    },
+    {
+      "username": "ali2",
+      "password": "123",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFsaTIiLCJwYXNzd29yZCI6IjEyMyIsImlhdCI6MTY0NDgzMTk1NX0.DIgg0XqHlhZHkBUiv3YVGQ0p7QKdOiCsDnm2C9caqCQ",
+      "id": 2
+    }
   ]
 }

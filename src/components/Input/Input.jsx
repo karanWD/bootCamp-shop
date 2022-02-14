@@ -1,8 +1,9 @@
 import React from "react";
+import "./Input.css"
 
 const Input = ({label, name, type, value, placeHolder, changeHandler}) => {
     return (
-        <div className={`my-3`}>
+        <div className={`my- 3`}>
             <label className={`d-block`}>{label}</label>
             <input className={`col-12`}
                    name={name}

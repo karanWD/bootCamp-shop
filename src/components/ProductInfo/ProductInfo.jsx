@@ -31,7 +31,14 @@ const ProductInfo = ({data}) => {
                     count: count
                 }
 
-                localStorage.setItem("cart",JSON.stringify(cartData))
+                const cartTemp = JSON.parse(localStorage.getItem("cart"))
+
+                if(cartTemp){
+                    const cartFinal = [...cartTemp,cartData]
+                    localStorage.setItem("cart",JSON.stringify(cartFinal))
+                }else{
+                    localStorage.setItem("cart",JSON.stringify([cartData]))
+                }
                 dispatch(setModal(<SucceedAlert text={"محصول مورد نظر با موفقیت افزوده شد"} />))
 
             }

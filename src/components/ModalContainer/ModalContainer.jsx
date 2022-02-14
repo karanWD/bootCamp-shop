@@ -4,7 +4,7 @@ import "./ModalContainer.css"
 const ModalContainer = ({children}) => {
     return(
         <div className={`modal-container col-5`}>
-            {children}
+                {children}
         </div>
     )
 }

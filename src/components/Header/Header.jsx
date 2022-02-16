@@ -11,14 +11,24 @@ import LoginBtn from "../LoginBtn/LoginBtn";
 import UserInfo from "../UserInfo/UserInfo";
 
 
-
 const Header = () => {
 
     // const {data, error, loading} = useAxios("menu")
 
-    useDispatchAxios("menu",fetchMenu,[])
+    useDispatchAxios("menu", fetchMenu, [])
 
     const menu = useSelector(state => state.menuReducer.menu)
+
+    const [token,setToken] = useState()
+
+    useEffect(()=>{
+        setToken(localStorage.getItem("token"))
+    },[])
+
+    const logOut = ()=>{
+        localStorage.removeItem("token")
+        setToken(null)
+    }
 
     // const [nav,setNav] = useState([])
     // useEffect(()=>{
@@ -43,10 +53,11 @@ const Header = () => {
                 <div className={`col-lg-2 px-0 d-flex justify-content-start align-items-center`}>
                     <CartBtn width={"30px"} height={"30px"}/>
                     {
-                        localStorage.getItem("token") ?
-                          <UserInfo token={localStorage.getItem("token") }/>
-                         :
-                         <LoginBtn/>
+                        token
+                            ?
+                            <UserInfo token={token} logout={logOut}/>
+                            :
+                            <LoginBtn/>
                     }
 
                 </div>

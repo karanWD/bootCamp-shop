@@ -6,7 +6,9 @@ import Nav from "../Nav/Nav";
 import {useSelector} from "react-redux";
 import useDispatchAxios from "../../hooks/useDispatchAxios";
 import {fetchMenu} from "../../redux/Menu/menu-actions";
-
+import {Link} from "react-router-dom"
+import LoginBtn from "../LoginBtn/LoginBtn";
+import UserInfo from "../UserInfo/UserInfo";
 
 
 
@@ -38,8 +40,15 @@ const Header = () => {
                 <div className={`col-lg-4 col-xxl-3`}>
                     <Search/>
                 </div>
-                <div className={`col-lg-1 px-0`}>
+                <div className={`col-lg-2 px-0 d-flex justify-content-start align-items-center`}>
                     <CartBtn width={"30px"} height={"30px"}/>
+                    {
+                        localStorage.getItem("token") ?
+                          <UserInfo token={localStorage.getItem("token") }/>
+                         :
+                         <LoginBtn/>
+                    }
+
                 </div>
                 <Nav data={menu}/>
             </div>

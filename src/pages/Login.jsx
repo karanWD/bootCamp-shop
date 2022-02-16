@@ -25,7 +25,7 @@ const Login = () => {
             axios.get(`http://localhost:4000/users?username=${data.username}&password=${data.password}`)
                 .then(res => {
                     if (res.data.length>0){
-                        localStorage.setItem("token",JSON.stringify(res.data[0].token))
+                        localStorage.setItem("token",res.data[0].token)
                         navigate("/")
                     }
                     else{

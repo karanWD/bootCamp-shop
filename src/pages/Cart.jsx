@@ -1,20 +1,23 @@
 import React, {useEffect} from "react";
 import {useNavigate} from "react-router-dom";
+import axios from "axios";
 
 const Cart = () => {
     const navigate = useNavigate()
-    const data = JSON.parse(localStorage.getItem("cart"))
-    const token = JSON.parse(localStorage.getItem("token"))
+    const token = localStorage.getItem("token")
 
     useEffect(() => {
-        if (!token) {
-            navigate("/login")
+        if (token) {
+           axios.get(`http://localhost:4000/cart?userToken=${token}`)
+               .then((res)=>{
+                   console.log("============",res)
+               })
         }
     },[])
 
     return (
         <div>
-            {data?.name}
+
         </div>
     )
 }

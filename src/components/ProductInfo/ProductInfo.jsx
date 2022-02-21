@@ -5,57 +5,80 @@ import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
 import {setModal} from "../../redux/Modal/modal-actions";
 import SucceedAlert from "../SucceedAlert/SucceedAlert";
+import {useNavigate} from "react-router-dom";
 
 const ProductInfo = ({data}) => {
 
-
     const [selectedColor, setSelectedColor] = useState()
+
     const [selectedSize, setSelectedSize] = useState()
 
     const [colorError, setColorError] = useState(null)
+
     const [sizeError, setSizeError] = useState(null)
 
-    const [errors,setErros] = useState({})
+    const [errors, setErros] = useState({})
 
     const count = useSelector(state => state.countReducer.count)
+
     const dispatch = useDispatch()
+
+    const navigate = useNavigate()
 
     const addToCartHandler = () => {
         if (selectedSize) {
+
             if (selectedColor) {
-                const cartData = {
-                    name: data.name,
-                    price: data.price - ((data.discount * data.price) / 100),
-                    size: data.sizes.find((item) => item.id === selectedSize),
-                    color: data.colors.find(item => item.id === selectedColor),
-                    count: count
+
+                if (localStorage.getItem("token")) {
+
+                    const cartData = {
+                        name: data.name,
+                        price: data.price - ((data.discount * data.price) / 100),
+                        size: data.sizes.find((item) => item.id === selectedSize),
+                        color: data.colors.find(item => item.id === selectedColor),
+                        count: count,
+                        userToken: localStorage.getItem("token")
+                    }
+
+                    // const cartTemp = JSON.parse(localStorage.getItem("cart"))
+
+                    // if(cartTemp){
+                    //     const cartFinal = [...cartTemp,cartData]
+                    //     localStorage.setItem("cart",JSON.stringify(cartFinal))
+                    // }else{
+                    //     localStorage.setItem("cart",JSON.stringify([cartData]))
+                    // }
+
+                    axios.post("http://localhost:4000/cart", {
+                        ...cartData
+                    })
+                        .then(() => {
+                                dispatch(setModal(<SucceedAlert text={"محصول مورد نظر با موفقیت افزوده شد"}/>))
+                            }
+                        )
+                        .catch(e => console.log(e))
+
+                } else {
+                    navigate("/login")
                 }
 
-                const cartTemp = JSON.parse(localStorage.getItem("cart"))
 
-                if(cartTemp){
-                    const cartFinal = [...cartTemp,cartData]
-                    localStorage.setItem("cart",JSON.stringify(cartFinal))
-                }else{
-                    localStorage.setItem("cart",JSON.stringify([cartData]))
-                }
-                dispatch(setModal(<SucceedAlert text={"محصول مورد نظر با موفقیت افزوده شد"} />))
-
-            }
-            else {
+            } else {
                 // setColorError("لطفا رنگ را انتخاب کنید")
-                setErros( prevState => {
-                    return{
-                       color:"لطفا رنگ را انتخاب کنید"
+                setErros(prevState => {
+                    return {
+                        color: "لطفا رنگ را انتخاب کنید"
                     }
                 })
             }
+
         } else {
             // setSizeError("لطفا سایز را انتخاب کنید")
-            setErros( prevState => {
-                return{
+            setErros(prevState => {
+                return {
                     ...prevState,
-                    size:"لطفا سایز را انتخاب کنید"
+                    size: "لطفا سایز را انتخاب کنید"
                 }
             })
         }
@@ -102,12 +125,12 @@ const ProductInfo = ({data}) => {
                 <h6>سایز</h6>
                 {
                     sizeError &&
-                    <span style={{color:"red"}}>{sizeError}</span>
+                    <span style={{color: "red"}}>{sizeError}</span>
                 }
                 <ul className={`d-flex justify-content-end mt-3`}>
                     {data?.sizes?.map(item =>
                         <li className={`position-relative py-2 px-3 ${item.id === selectedSize ? `selectedSize` : ``}`}
-                            onClick={() =>{
+                            onClick={() => {
                                 setSelectedSize(item.id)
                                 setSizeError()
                                 setColorError()
@@ -123,7 +146,7 @@ const ProductInfo = ({data}) => {
                 <h6>رنگ</h6>
                 {
                     colorError &&
-                    <span style={{color:"red"}}>{colorError}</span>
+                    <span style={{color: "red"}}>{colorError}</span>
                 }
                 <ul className={`d-flex justify-content-end`}>
                     {data?.colors?.map(item =>
